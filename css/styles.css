@@ -1,0 +1,122 @@
+/* 
+========================================================================== 
+Mobile-first Design Layout for Project 7 Treehouse "WebApp"
+========================================================================== 
+*/
+
+/* Universal Attributes */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+
+}
+
+body {
+    height: 100vh;
+
+}
+
+header {
+    background-color: steelblue;
+    grid-area: head;
+
+}
+
+nav {
+    background-color: purple;
+    grid-area: nav;
+
+}
+
+main {
+    background-color: blue;
+    grid-area: main;
+    overflow: auto;
+
+}
+
+/* divs within main */
+
+.dashboard {
+    background-color: tan;
+}
+
+.traffic-chart {
+    background-color: cornflowerblue;
+}
+
+.traffic-daily {
+    background-color: cornsilk;
+}
+
+.mobile-users {
+    background-color: crimson;
+}
+
+.social {
+    background-color: teal;
+}
+.new-members {
+    background-color: thistle;
+}
+
+.recent-activity {
+    background-color: palegoldenrod;
+}
+
+.message {
+    background-color: palegreen;
+}
+
+.settings {
+    background-color: papayawhip;
+}
+
+
+/* Grid Stuff */
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 70px 1fr;
+    grid-template-areas: "head"
+                         "nav"
+                         "main";
+
+}
+
+
+/* 
+========================================================================== 
+Media Queries for Tablet and Desktop views
+========================================================================== 
+*/
+
+/* --------------------------- 1024px+ Wide Screens */
+
+@media screen and (min-width: 1024px){
+
+    .grid-container {
+        grid-template-columns: 80px 1fr; /* nav is 80px, main is 1fr */
+        grid-template-rows: 60px 1fr; /*header is 60px, rest is 1fr */
+        grid-template-areas: "head head"
+                             "nav main";
+
+    }
+
+}
+
+
+/* --------------------------- 768px+ Wide Screens */
+@media screen and (min-width: 768px){
+    .grid-container {
+        grid-template-columns: 80px 1fr; /* nav is 80px, main is 1fr */
+        grid-template-rows: 60px 1fr; /*header is 60px, rest is 1fr */
+        grid-template-areas: "head head"
+                             "nav main";
+
+    }
+}

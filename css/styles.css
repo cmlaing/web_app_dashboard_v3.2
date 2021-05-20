@@ -18,8 +18,28 @@ body {
 
 }
 
+/* Grid Stuff */
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 70px 1fr;
+    grid-template-areas: "head"
+                         "nav"
+                         "main";
+
+}
+
+/* 
+================================================
+Grid area: head
+Includes WebApp title, notifications, user info
+================================================
+*/
+
 header {
-    background-color: steelblue;
+    background-color: #7477BF;
     grid-area: head;
 
 }
@@ -45,31 +65,57 @@ header {
 }
 
 /* bell icon in header */
-.bell { 
+.header-container svg { 
     height: 40px;
     width: 20px;
     flex-grow: 1;
+    fill: white;
+    border-right: solid 2px cornsilk;
 
 }
 /*user image and text */
 
 
+
 .user-image {
-    height: 40x;
-    width: 15px;
+    height: 2rem;
+    width: 2rem;
     border-radius: 100%;
-    flex-grow: 1;
+    
     border: solid 1px cornsilk;
 
 }
 
-
+/* Navigation Bar */
 
 nav {
-    background-color: purple;
+    background-color: #4D4C72;
+    justify-content: center;
     grid-area: nav;
+    display: flex;
+    
+
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 1.5em;
 
 }
+
+nav svg{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    align-self: center;
+   
+
+    height: auto;
+    width: 2.5rem;
+    fill: white;
+
+
+}
+
+/* Main Content */
 
 main {
     background-color: blue;
@@ -116,18 +162,7 @@ main {
 }
 
 
-/* Grid Stuff */
 
-.grid-container {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 60px 70px 1fr;
-    grid-template-areas: "head"
-                         "nav"
-                         "main";
-
-}
 
 
 /* 
@@ -148,6 +183,13 @@ Media Queries for Tablet and Desktop views
 
     }
 
+    nav {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
 }
 
 
@@ -159,5 +201,12 @@ Media Queries for Tablet and Desktop views
         grid-template-areas: "head head"
                              "nav main";
 
+    }
+
+    nav {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 }

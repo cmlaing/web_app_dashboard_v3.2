@@ -24,6 +24,47 @@ header {
 
 }
 
+
+
+/* header-container includes WebApp title, bell svg, user image, and user name */
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: center;
+    height: 80px;
+    flex-grow: 1;
+
+}
+
+.title { /* WebApp title */
+    color: white;
+    flex-grow: 1;
+    margin-top: 0;
+
+}
+
+/* bell icon in header */
+.bell { 
+    height: 40px;
+    width: 20px;
+    flex-grow: 1;
+
+}
+/*user image and text */
+
+
+.user-image {
+    height: 40x;
+    width: 15px;
+    border-radius: 100%;
+    flex-grow: 1;
+    border: solid 1px cornsilk;
+
+}
+
+
+
 nav {
     background-color: purple;
     grid-area: nav;

@@ -69,16 +69,27 @@ var mobileUsers = document.getElementById('mobile-user-chart');
 var mobileVolume = [2000, 550, 500];
 var mobileLabels = ['Desktop', 'Tablet', 'Phones'];
 
-/*
-To create a chart, we first need to create an instance of the Chart().
 
-*/
+
+
+const mobileOptions = {
+    plugins: {
+        legend: {
+            position: 'right',
+            labels: {
+                boxWidth: 20,
+                fontStyle: 'bold'
+                    }
+                 }
+            }
+    };
 
 
    var mobileUsersChart = new Chart(mobileUsers, {
-    type: "pie",
+    type: "doughnut",
     data: {
        labels: mobileLabels,
+       options: mobileOptions,
        datasets: [
        {
            label: "Mobile Users",
@@ -90,7 +101,9 @@ To create a chart, we first need to create an instance of the Chart().
        ]
     }
     
+    
    });
+
 
 
 

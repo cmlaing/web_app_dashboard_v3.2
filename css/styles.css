@@ -133,7 +133,17 @@ nav svg{
 
 }
 
-/* Main Content */
+/* 
+================================================
+Grid area: main
+Includes: 
+Dashboard and Traffic Line Graph
+ all charts,
+Social Stats Cards: Facebook, Instagram, Twitter
+messages
+settings
+================================================
+*/
 
 main {
     background-color: blue; /* only shows up if height: 100%; in grid container */
@@ -147,9 +157,9 @@ main {
 /* divs within main */
 
 /*
-=================================================
-Main Content - Dashboard and Traffic Line Graph
-=================================================
+======================================================
+Main Content - Dashboard and Traffic Charts/Graphs
+======================================================
 */
 .dashboard {
     background-color: tan;
@@ -160,6 +170,7 @@ Main Content - Dashboard and Traffic Line Graph
 
 }
 
+/* first traffic chart */
 .nav-traffic {
     list-style-type: none;
     margin: 0;
@@ -180,39 +191,85 @@ canvas { /* may help keep traffic charts confined */
     max-width: 100%;
   }
 
-#traffic-chart {
+  /* the specific charts within the divs with same name*/
+#traffic-chart,
+#traffic-daily-chart,
+#mobile-user-chart {
     background: white;
-    width: 100%;
+    width: 80%;
 
 }
 
-
-
-
-
-
-
-
-
-
+/* first traffic chart div, the line graph */
 .traffic-chart {
     background-color: cornflowerblue;
     width: 100%;
 }
-
+/* second traffic chart div, the bar graph */
 .traffic-daily {
     background-color: cornsilk;
     width: 100%;
 }
 
+/* third chart div, doughnut style for mobile users */
 .mobile-users {
     background-color: white;
     width: 100%;
 }
 
+/* =============================================
+Social Stats Cards: Facebook, Instagram, Twitter
+
+Social -> socialCard (svg and stats)
+==============================================*/
+
 .social {
-    background-color: teal;
+    background-color: white;
+    width: 100%;
+    
+
+    
 }
+
+.socialCard {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid rgb(190, 188, 188);
+    border-radius: 5px;
+    margin: auto;
+    padding: 0.5rem;
+    width: 60%;
+    background-color: #fafafa;
+
+
+}
+
+.social svg {
+    height: auto;
+    width: 2.5rem;
+    fill: #7477BF;
+    margin-left: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+
+/* =============================================
+New Members
+==============================================*/
+
+
 .new-members {
     background-color: thistle;
 }

@@ -206,7 +206,8 @@ canvas { /* may help keep traffic charts confined */
 }
 
 .mobile-users {
-    background-color: crimson;
+    background-color: white;
+    width: 100%;
 }
 
 .social {

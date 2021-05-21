@@ -10,6 +10,7 @@ Mobile-first Design Layout for Project 7 Treehouse "WebApp"
     box-sizing: border-box;
     margin: 0;
     padding: 0;  
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
 
@@ -22,14 +23,15 @@ body {
 
 .grid-container {
     display: grid;
-    height: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 60px 70px 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: 60px 70px auto;
     grid-template-areas: "head"
                          "nav"
                          "main";
 
 }
+
+
 
 /* 
 ================================================
@@ -57,32 +59,46 @@ header {
 
 }
 
-.title { /* WebApp title */
+.header-container h1 { /* WebApp title */
     color: white;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    margin: 0;
+
     flex-grow: 1;
-    margin-top: 0;
+    
 
 }
 
 /* bell icon in header */
 .header-container svg { 
-    height: 40px;
-    width: 20px;
+    height: 30px;
+    width: auto;
     flex-grow: 1;
     fill: white;
     border-right: solid 2px cornsilk;
+    padding-right: 0.5rem;
+    margin-right: 0.5rem;
 
 }
+
+
 /*user image and text */
-
-
-
 .user-image {
     height: 2rem;
     width: 2rem;
     border-radius: 100%;
-    
     border: solid 1px cornsilk;
+    
+
+}
+
+
+.header-container h3 { /* Student Name */
+    color: white;
+    padding: 0.2rem;
+    font-weight: lighter;
 
 }
 
@@ -112,30 +128,81 @@ nav svg{
     width: 2.5rem;
     fill: white;
 
+    margin-left: 1.5rem;
+
 
 }
 
 /* Main Content */
 
 main {
-    background-color: blue;
+    background-color: blue; /* only shows up if height: 100%; in grid container */
     grid-area: main;
     overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
 /* divs within main */
 
+/*
+=================================================
+Main Content - Dashboard and Traffic Line Graph
+=================================================
+*/
 .dashboard {
     background-color: tan;
+    width: 100%;
 }
+.alert-box {
+    color: white;
+
+}
+
+.nav-traffic {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-traffic li {
+    display: block;
+    color: white;
+    text-align: center;
+    float: left;
+    padding: 16px;
+
+}
+
+
+canvas { /* may help keep traffic charts confined */
+    max-width: 100%;
+  }
+
+#traffic-chart {
+    background: white;
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
 
 .traffic-chart {
     background-color: cornflowerblue;
+    width: 100%;
 }
 
 .traffic-daily {
     background-color: cornsilk;
+    width: 100%;
 }
 
 .mobile-users {

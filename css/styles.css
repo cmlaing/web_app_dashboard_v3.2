@@ -146,7 +146,7 @@ settings
 */
 
 main {
-    background-color: blue; /* only shows up if height: 100%; in grid container */
+    background-color: white; /* only shows up if height: 100%; in grid container */
     grid-area: main;
     overflow: auto;
     display: flex;
@@ -271,19 +271,87 @@ New Members
 
 
 .new-members {
-    background-color: thistle;
+    background-color: white;
+    border-bottom: 2px solid grey;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+
 }
+
+.member img {
+    border-radius: 100%;
+    height: 2.5rem;
+    width: auto;
+
+
+}
+
+/* =============================================
+Recent Activity
+==============================================*/
 
 .recent-activity {
-    background-color: palegoldenrod;
+    background-color: white;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
 }
+
+.activityCard {
+    border-bottom: 2px solid grey;
+
+}
+
+.activityCard img {
+    border-radius: 100%;
+    height: 2.5rem;
+    width: auto;
+
+}
+
+/* =============================================
+Messages
+==============================================*/
 
 .message {
-    background-color: palegreen;
+    background-color: white;
+    width: 90%;
 }
 
+.send-message {
+    background-color: #7477BF;
+    cursor: pointer;
+
+}
+
+/* =============================================
+Settings
+==============================================*/
+
 .settings {
-    background-color: papayawhip;
+    background-color: white;
+    width: 90%;
+}
+
+.save {
+    background-color: #7477BF;
+    cursor: pointer;
+
+}
+
+.cancel {
+    background-color: lightgray;
+    cursor: pointer;
+
 }
 
 

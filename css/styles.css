@@ -19,6 +19,15 @@ body {
 
 }
 
+.bottom-border {
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 0.5rem;
+}
+
+/* centering */
+
+
+
 /* Grid Stuff */
 
 .grid-container {
@@ -162,7 +171,6 @@ Main Content - Dashboard and Traffic Charts/Graphs
 ======================================================
 */
 .dashboard {
-    background-color: tan;
     width: 100%;
 }
 .alert-box {
@@ -196,24 +204,22 @@ canvas { /* may help keep traffic charts confined */
 #traffic-daily-chart,
 #mobile-user-chart {
     background: white;
-    width: 80%;
+    width: 70%;
+    
 
 }
 
 /* first traffic chart div, the line graph */
 .traffic-chart {
-    background-color: cornflowerblue;
     width: 100%;
 }
 /* second traffic chart div, the bar graph */
 .traffic-daily {
-    background-color: cornsilk;
     width: 100%;
 }
 
 /* third chart div, doughnut style for mobile users */
 .mobile-users {
-    background-color: white;
     width: 100%;
 }
 
@@ -224,10 +230,7 @@ Social -> socialCard (svg and stats)
 ==============================================*/
 
 .social {
-    background-color: white;
     width: 100%;
-    
-
     
 }
 
@@ -237,7 +240,7 @@ Social -> socialCard (svg and stats)
     align-items: center;
     border: 2px solid rgb(190, 188, 188);
     border-radius: 5px;
-    margin: auto;
+    margin: 1rem auto;
     padding: 0.5rem;
     width: 60%;
     background-color: #fafafa;
@@ -271,21 +274,30 @@ New Members
 
 
 .new-members {
-    background-color: white;
-    border-bottom: 2px solid grey;
     display:flex;
     justify-content: flex-start;
+    align-content: center; 
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+  
 
+}
+
+.member {
+    margin: 1rem auto;
+    width: 90%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    
 }
 
 .member img {
     border-radius: 100%;
-    height: 2.5rem;
+    height: 5rem;
     width: auto;
 
 
@@ -296,24 +308,29 @@ Recent Activity
 ==============================================*/
 
 .recent-activity {
-    background-color: white;
     display:flex;
     justify-content: flex-start;
+    align-content: center; 
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .activityCard {
-    border-bottom: 2px solid grey;
+    display: block;
+    margin: 1rem auto;
+    width: 90%;
+    text-align: center;
+    padding-bottom: 0.5rem;
 
 }
 
 .activityCard img {
     border-radius: 100%;
-    height: 2.5rem;
+    height: 5rem;
     width: auto;
 
 }
@@ -323,13 +340,43 @@ Messages
 ==============================================*/
 
 .message {
-    background-color: white;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1rem auto;
     width: 90%;
+    text-align: center;
+    padding-bottom: 0.5rem;
 }
 
-.send-message {
+.message form {
+    width: 90%;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+#search-user,
+#message-user {
+    width: 100%;
+    height: 3rem;
+    color: #c2bebe;
+    border-radius: 5px;
+    border: solid 1px #cccccc;
+    background-color: #f5f5f5;
+    margin-bottom: 0.5rem;
+    
+  }
+
+#send-message {
     background-color: #7477BF;
     cursor: pointer;
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    border: solid 1px #cccccc;
+    color: white;
 
 }
 
@@ -338,19 +385,48 @@ Settings
 ==============================================*/
 
 .settings {
-    background-color: white;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1rem auto;
     width: 90%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+#timezone {
+    width: 90%;
+    height: 3rem;
+    color: #c2bebe;
+    border-radius: 5px;
+    border: solid 1px #cccccc;
+    background-color: #f5f5f5;
+    margin-bottom: 0.5rem;
+
 }
 
 .save {
     background-color: #7477BF;
     cursor: pointer;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: solid 1px #cccccc;
+    color: white;
+    margin-bottom: 0.5rem;
 
 }
 
 .cancel {
     background-color: lightgray;
     cursor: pointer;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: solid 1px #cccccc;
+    color: white;
 
 }
 

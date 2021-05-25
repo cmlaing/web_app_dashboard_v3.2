@@ -69,7 +69,7 @@
 <br>
 
         <!--Traffic Chart Navigation-->
-        <div class="traffic-chart">
+        <div class="traffic-chart bottom-border">
 
 
             <h3>TRAFFIC</h3>
@@ -90,7 +90,7 @@
 
 
         <!--DAILY TRAFFIC-->
-        <div class="traffic-daily">
+        <div class="traffic-daily bottom-border">
             <h3>DAILY TRAFFIC</h3>
                <!--Traffic-Daily Chart-->
                 <canvas id="traffic-daily-chart">            
@@ -99,7 +99,7 @@
         </div>
 
         <!--MOBILE USERS-->
-        <div class="mobile-users">
+        <div class="mobile-users bottom-border">
             <h3>MOBILE USERS</h3>
             
                <!--Mobile user Chart-->
@@ -110,7 +110,7 @@
 
 
         <!--SOCIAL STATS-->
-        <div class="social">
+        <div class="social bottom-border">
             <h3>SOCIAL STATS</h3>
             <div class="socialCard">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -146,10 +146,10 @@
 
         </div>
         <!--NEW MEMBERS-->
-        <div class="new-members">
+        <div class="new-members bottom-border">
             <h3>NEW MEMBERS</h3>
 
-            <div class="member">
+            <div class="member bottom-border">
                 <img src="images/member-1.jpg" alt="Member: Victoria Chambers">
                 <h4>Victoria Chambers</h4>
                 <p>victoriachambers@email.com</p>
@@ -157,7 +157,7 @@
 
             </div>
 
-            <div class="member">
+            <div class="member bottom-border">
                 <img src="images/member-2.jpg" alt="Member: Dale Byrd">
                 <h4>Dale Byrd</h4>
                 <p>dalebyrd@email.com</p>
@@ -165,7 +165,7 @@
 
             </div>
 
-            <div class="member">
+            <div class="member bottom-border">
                 <img src="images/member-3.jpg" alt="Member: Dawn Wood">
                 <h4>Dawn Wood</h4>
                 <p>dawnwood@email.com</p>
@@ -173,7 +173,7 @@
 
             </div>
 
-            <div class="member">
+            <div class="member bottom-border">
                 <img src="images/member-4.jpg" alt="Member: Dan Oliver">
                 <h4>Dan Oliver</h4>
                 <p>danoliver@email.com</p>
@@ -184,31 +184,31 @@
         </div>
 
         <!--RECENT ACTIVITY-->
-        <div class="recent-activity">
+        <div class="recent-activity bottom-border">
             <h3>RECENT ACTIVITY</h3>
 
-            <div class="activityCard">
+            <div class="activityCard bottom-border">
                 <img src="images/member-1.jpg" alt="Member: Victoria Chambers">
                 <p>Victoria Chambers commented on <strong>WebApp's SEO Tips</strong></p>
                 <p> 4 hours ago</p>
 
             </div>
 
-            <div class="activityCard">
+            <div class="activityCard bottom-border">
                 <img src="images/member-2.jpg" alt="Member: Dale Byrd">
                 <p>Dale Byrd liked the post <strong>Facebook's Changes for 2021</strong></p>
                 <p> 5 hours ago</p>
 
             </div>
 
-            <div class="activityCard">
+            <div class="activityCard bottom-border">
                 <img src="images/member-3.jpg" alt="Member: Dawn Wood">
                 <p>Dawn Wood commented on <strong>Facebook's Changes for 2021</strong></p>
                 <p> 5 hours ago</p>
 
             </div>
 
-            <div class="activityCard">
+            <div class="activityCard bottom-border">
                 <img src="images/member-4.jpg" alt="Member: Dan Oliver">
                 <p>Dan Oliver posted <strong>WebApp's SEO Tips</strong></p>
                 <p> 1 day ago</p>
@@ -218,22 +218,37 @@
         </div>
 
         <!--MESSAGE USER-->
-        <div class="message">
-            <h3>MESSAGE USER</h3>   
-            <input type="text" id="search-user" placeholder="Search for User"> <br>
-            <input type="text" id="message-user" placeholder="Message for User"> <br>
-            <button class="send-message"> Send </button>
+        <div class="message bottom-border">
+            <h3>MESSAGE USER</h3>  
+            
+            <form>
+                <input type="text" id="search-user" placeholder="Search for User"> <br>
+                <textarea id="message-user" placeholder="Message for User"> </textarea> <br>
+                <button id="send-message"> Send </button>
+            </form>
 
             
         </div>
 
         <!--SETTINGS-->
-        <div class="settings">
+        <div class="settings bottom-border">
             <h3>SETTINGS</h3>   
             <!-- toggle switches-->
+            <div> send email toggle</div>
+            <div> set profile to public toggle</div>
             <!--Timezone drop down menu-->
-            <button class="save"> Save </button>
-            <button class="cancel"> Cancel </button>
+            <select class="form-field" id="timezone">
+                <option disabled selected>Select Timezone</option>
+                <option value="pacific">Pacific Time</option>
+                <option value="mountain">Mountain Time</option>
+                <option value="standard">Standard Time</option>
+                <option value="central">Central time</option>
+                <option value="eastern">Eastern Time</option>
+            </select>
+            <div>
+                <button class="save"> Save </button>
+                <button class="cancel"> Cancel </button>
+            </div>
 
         </div>
     </main>

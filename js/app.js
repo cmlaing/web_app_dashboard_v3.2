@@ -23,12 +23,18 @@ To create a chart, we first need to create an instance of the Chart().
        {
            label: "Traffic",
            data: volume,
-           backgroundColor: "rgba(116, 119, 191, .3)",
-           borderColor: "rgba(255, 99, 132, 1)",
-           borderWidth: 1
+           lineTension: 0.3,
+           fill: {
+            target: 'origin',
+            above: 'rgba(116, 119, 191, 0.66)',   // Area will be purple above the origin
+            below: 'rgba(116, 119, 191, 0.66)'    // And lighter purple below the origin
+            
+          }
        }
        ]
     }
+
+    
     
    });
 

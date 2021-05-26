@@ -172,9 +172,16 @@ Main Content - Dashboard and Traffic Charts/Graphs
 */
 .dashboard {
     width: 100%;
+    background-color:#F7F7F7;
+}
+
+.dashboard h2{
+    background-color: white;
+    width: 40%;
 }
 .alert-box {
-    color: white;
+    color: pink;
+    background-color: white;
 
 }
 
@@ -187,7 +194,7 @@ Main Content - Dashboard and Traffic Charts/Graphs
 
 .nav-traffic li {
     display: block;
-    color: white;
+    color: pink;
     text-align: center;
     float: left;
     padding: 16px;
@@ -231,6 +238,7 @@ Social -> socialCard (svg and stats)
 
 .social {
     width: 100%;
+    margin: 1rem;
     
 }
 
@@ -280,7 +288,7 @@ New Members
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   
@@ -314,9 +322,10 @@ Recent Activity
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin: 1rem;
 }
 
 .activityCard {
@@ -346,7 +355,7 @@ Messages
     flex-wrap: wrap;
     flex-direction: column;
     margin: 1rem auto;
-    width: 90%;
+    width: 100%;
     text-align: center;
     padding-bottom: 0.5rem;
 }
@@ -391,7 +400,7 @@ Settings
     flex-wrap: wrap;
     flex-direction: column;
     margin: 1rem auto;
-    width: 90%;
+    width: 100%;
     text-align: center;
     padding-bottom: 0.5rem;
 }
@@ -420,7 +429,7 @@ Settings
 }
 
 .cancel {
-    background-color: lightgray;
+    background-color: #999999;
     cursor: pointer;
     width: 10rem;
     height: 3rem;
@@ -445,6 +454,7 @@ Media Queries for Tablet and Desktop views
 @media screen and (min-width: 1024px){
 
     .grid-container {
+        display: grid;
         grid-template-columns: 80px 1fr; /* nav is 80px, main is 1fr */
         grid-template-rows: 60px 1fr; /*header is 60px, rest is 1fr */
         grid-template-areas: "head head"
@@ -452,12 +462,69 @@ Media Queries for Tablet and Desktop views
 
     }
 
+
+
     nav {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: flex-start;
     }
+
+.dashboard h2 {
+    max-width: 200px;
+    height: 60px;
+}
+
+    .traffic-daily {
+        border-bottom: 2px solid #cccccc;
+        padding-bottom: 0.5rem;
+        
+    }
+    
+
+.traffic-daily,
+.mobile-users,
+.new-members,
+.recent-activity,
+.message,
+.settings {
+    width: 50%;
+    margin: 0;
+    border: solid 2px pink;
+    
+
+}
+
+#traffic-chart {
+    max-height: 400px;
+    
+}
+
+#traffic-daily-chart,
+#mobile-user-chart{
+    max-height: 300px;
+    
+}
+
+.social-flex {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.socialCard {
+    width: 40%;
+    margin: 10px;
+}
+
+
+
+
+
 
 }
 

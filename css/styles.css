@@ -167,7 +167,7 @@ main {
 
 /*
 ======================================================
-Main Content - Dashboard and Traffic Charts/Graphs
+Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
 ======================================================
 */
 .dashboard {
@@ -179,9 +179,16 @@ Main Content - Dashboard and Traffic Charts/Graphs
     background-color: white;
     width: 40%;
 }
-.alert-box {
-    color: pink;
-    background-color: white;
+.alert{
+    color: white;
+    background-color: #7477BF;
+    border-radius: 10px;
+    border: 2px solid #7477BF;
+    width: 100%;
+    display: flex;
+    justify-content:space-between
+    
+
 
 }
 

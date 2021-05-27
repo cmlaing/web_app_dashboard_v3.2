@@ -1,5 +1,27 @@
 
+/*=======================================
+ Alert Box
+========================================*/
 
+// Grab the div that the banner will be inside
+const alertBanner = document.getElementById("alert");
+
+// HTML for the banner
+alertBanner.innerHTML = ` 
+   <div class="alert">
+      <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks 
+      to complete </p>
+      <p class="alert-banner-close">x</p>
+   </div>
+`;
+// make the X button close the banner when clicked
+alertBanner.addEventListener('click', e => {
+   const element = e.target;
+   if (element.classList.contains("alert-banner-close")) {
+      alertBanner.style.display = 'none'
+   }
+
+});
 
 /*=======================================
  traffic chart

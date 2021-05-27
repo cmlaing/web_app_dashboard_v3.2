@@ -92,6 +92,28 @@ header {
 
 }
 
+.active-bell {
+    width: 7px;
+    height: 7px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 1px;
+}
+
+.dropdown-menu {
+    display: none; /* by default, don't show menu items */
+    background-color: #7477BF;
+    color: white;
+    border: 2px solid pink;
+    position: absolute;
+    min-width: 5rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+}
+
 
 /*user image and text */
 .user-image {
@@ -199,10 +221,20 @@ Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
 
 .nav-traffic li {
     display: block;
-    color: pink;
-    text-align: center;
-    float: left;
-    padding: 16px;
+    color: black;
+    background-color: white;
+    text-align: right;
+    float: right;
+    padding: 8px;
+
+}
+.nav-traffic li:hover {
+    color: white;
+    background-color: lightgreen;
+    border-radius: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
 
 }
 

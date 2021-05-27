@@ -1,3 +1,26 @@
+/*=======================================
+ Bell Notification
+========================================*/
+
+// show the notifcation list when the bell is clicked
+let bell = document.querySelector('.bell');
+let dropdownMenu = document.querySelector('.dropdown-menu');
+
+bell.addEventListener('click', e => {
+   dropdownMenu.style.display = 'block'
+
+});
+
+
+
+// hide notification list when click outside the menu
+window.addEventListener('mouseup', function(event){
+   if (event.target != dropdownMenu && event.target.parentNode != dropdownMenu) { 
+      dropdownMenu.style.display = 'none';
+   }
+
+});
+
 
 /*=======================================
  Alert Box
@@ -96,7 +119,7 @@ To create a chart, we first need to create an instance of the Chart().
       monthly.classList.remove('active');
 
    /* put in new traffic data */
-   trafficChart.data.datasets[0].volume = [999, 100, 100, 100, 100, 950, 999];
+   trafficChart.data.datasets[0].data = [999, 100, 100, 100, 100, 950, 999];
    trafficChart.data.labels = ["12-1", "1-2", "3-4", "5-6", "7-8", "9-10", "11-12"];
    trafficChart.update();
 
@@ -111,7 +134,7 @@ To create a chart, we first need to create an instance of the Chart().
       monthly.classList.remove('active');
    
      /* put in new traffic data */
-     trafficChart.data.datasets[0].volume = [1200, 1050, 2500, 1745, 2678, 540, 80];
+     trafficChart.data.datasets[0].data = [1200, 1050, 2500, 1745, 2678, 540, 80];
      trafficChart.data.labels = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
      trafficChart.update();
    
@@ -126,7 +149,7 @@ To create a chart, we first need to create an instance of the Chart().
       monthly.classList.remove('active');
    
      /* put in new traffic data */
-     trafficChart.data.datasets[0].volume = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500];
+     trafficChart.data.datasets[0].data = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500];
      trafficChart.data.labels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10',
      '11-17','18-24', '25-31'];
      trafficChart.update();
@@ -142,7 +165,7 @@ To create a chart, we first need to create an instance of the Chart().
       monthly.classList.add('active');
    
      /* put in new traffic data */
-     trafficChart.data.datasets[0].volume = [1600, 12050, 10000, 12000, 15500, 17500, 12500, 10850, 22050, 15000, 20500, 11111];
+     trafficChart.data.datasets[0].data = [1600, 12050, 10000, 12000, 15500, 17500, 12500, 10850, 22050, 15000, 20500, 11111];
      trafficChart.data.labels = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug',
      'Sept','Oct', 'Nov', 'Dec'];
      trafficChart.update();

@@ -2,24 +2,28 @@
  Bell Notification
 ========================================*/
 
-// show the notifcation list when the bell is clicked
+// show the notification list when the bell is clicked
 let bell = document.querySelector('.bell');
+let activeBell = document.querySelector('.active-bell');
 let dropdownMenu = document.querySelector('.dropdown-menu');
 
 bell.addEventListener('click', e => {
-   dropdownMenu.style.display = 'block'
+   dropdownMenu.style.display = 'block' // display drop down menu
+   activeBell.style.display = 'none'; // make green dot go away
 
 });
-
-
 
 // hide notification list when click outside the menu
 window.addEventListener('mouseup', function(event){
    if (event.target != dropdownMenu && event.target.parentNode != dropdownMenu) { 
       dropdownMenu.style.display = 'none';
    }
+   
 
 });
+
+
+
 
 
 /*=======================================

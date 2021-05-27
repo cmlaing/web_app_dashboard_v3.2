@@ -28,8 +28,28 @@ alertBanner.addEventListener('click', e => {
 ========================================*/
 var ctx = document.getElementById('traffic-chart');
 var volume = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500];
-var dates = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10',
+var labels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10',
                  '11-17','18-24', '25-31'];
+
+
+   /* Traffic object literal to hold values for the hourly/daily/weekly/monthly values */
+
+   let trafficOptions = {
+      aspectRatio: 2.5,
+      animation: {
+         duration: 0
+      },
+      scales: {
+         y: {
+            beginAtZero: true
+         }
+      },
+      plugins: {
+         legend: {
+            display: false
+         }
+      } 
+   };
 
 /*
 To create a chart, we first need to create an instance of the Chart().
@@ -40,7 +60,7 @@ To create a chart, we first need to create an instance of the Chart().
    var trafficChart = new Chart(ctx, {
     type: "line",
     data: {
-       labels: dates,
+       labels: labels,
        datasets: [
        {
            label: "Traffic",
@@ -54,11 +74,82 @@ To create a chart, we first need to create an instance of the Chart().
           }
        }
        ]
-    }
+    },
+    options: trafficOptions
 
-    
-    
    });
+
+   /* Hourly/Daily/Weekly/Monthly traffic changes */
+
+   var hourly = document.getElementById('hourly');
+   var daily = document.getElementById('daily');
+   var weekly = document.getElementById('weekly');
+   var monthly = document.getElementById('monthly');
+
+
+   // when clicked, remove "active" class from everything except the one that was clicked
+   hourly.addEventListener('click', e => {
+      e.preventDefault();
+      daily.classList.remove('active');
+      hourly.classList.add('active');
+      weekly.classList.remove('active');
+      monthly.classList.remove('active');
+
+   /* put in new traffic data */
+   trafficChart.data.datasets[0].volume = [999, 100, 100, 100, 100, 950, 999];
+   trafficChart.data.labels = ["12-1", "1-2", "3-4", "5-6", "7-8", "9-10", "11-12"];
+   trafficChart.update();
+
+   });
+
+   // when clicked, remove "active" class from everything except the one that was clicked
+   daily.addEventListener('click', e => {
+      e.preventDefault();
+      daily.classList.add('active');
+      hourly.classList.remove('active');
+      weekly.classList.remove('active');
+      monthly.classList.remove('active');
+   
+     /* put in new traffic data */
+     trafficChart.data.datasets[0].volume = [1200, 1050, 2500, 1745, 2678, 540, 80];
+     trafficChart.data.labels = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+     trafficChart.update();
+   
+   });
+
+   // when clicked, remove "active" class from everything except the one that was clicked
+   weekly.addEventListener('click', e => {
+      e.preventDefault();
+      daily.classList.remove('active');
+      hourly.classList.remove('active');
+      weekly.classList.add('active');
+      monthly.classList.remove('active');
+   
+     /* put in new traffic data */
+     trafficChart.data.datasets[0].volume = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500];
+     trafficChart.data.labels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10',
+     '11-17','18-24', '25-31'];
+     trafficChart.update();
+   
+   });
+
+   // when clicked, remove "active" class from everything except the one that was clicked
+   monthly.addEventListener('click', e => {
+      e.preventDefault();
+      daily.classList.remove('active');
+      hourly.classList.remove('active');
+      weekly.classList.remove('active');
+      monthly.classList.add('active');
+   
+     /* put in new traffic data */
+     trafficChart.data.datasets[0].volume = [1600, 12050, 10000, 12000, 15500, 17500, 12500, 10850, 22050, 15000, 20500, 11111];
+     trafficChart.data.labels = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug',
+     'Sept','Oct', 'Nov', 'Dec'];
+     trafficChart.update();
+   
+   });
+
+
 
 /*=======================================
 daily traffic chart

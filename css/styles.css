@@ -81,15 +81,51 @@ header {
 }
 
 /* bell icon in header */
+
+
+
 .header-container svg { 
     height: 30px;
     width: auto;
     flex-grow: 1;
     fill: white;
-    border-right: solid 2px cornsilk;
     padding-right: 0.5rem;
     margin-right: 0.5rem;
 
+}
+
+.divider {
+    border-right: solid 2px cornsilk;
+    height: 30px;
+    width: auto;
+    fill: white;
+    padding-right: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+@keyframes motionBell {
+    30% {
+        fill: pink;
+        transform: scale(1.4);
+    }
+    50% {
+        fill: pink;
+        transform: rotate(30deg);
+    }
+    60% {
+        fill: pink;
+        transform: rotate(-30deg);
+    }
+    100% {
+        fill: pink;
+        transform: scale(1);
+    }
+}
+
+
+
+.bell svg:hover {
+     animation: motionBell 1s linear backwards;
 }
 
 .active-bell {
@@ -123,6 +159,7 @@ header {
     width: 2rem;
     border-radius: 100%;
     border: solid 1px cornsilk;
+    
     
 
 }
@@ -418,11 +455,13 @@ Messages
     
   }
 
-  /*=======================
+  /*===========================================================
   Template code from 
   https://www.w3schools.com/howto/howto_js_autocomplete.asp
   with minor changes.
-  =======================*/
+  Autocomplete for Search User input box with 
+  id="search-user"
+  ============================================================*/
 
   /*the container must be positioned relative:*/
 .autocomplete {

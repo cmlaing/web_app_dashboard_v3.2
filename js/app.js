@@ -256,11 +256,13 @@ const mobileOptions = {
 Message User
 =============================================*/
 
-
-/* =======
-autocomplete JS template taken from
-https://www.w3schools.com/howto/howto_js_autocomplete.asp
-========= */
+  /*===========================================================
+  Template code from 
+  https://www.w3schools.com/howto/howto_js_autocomplete.asp
+  with minor changes.
+  Autocomplete for Search User input box with 
+  id="search-user"
+  ============================================================*/
 
 
 function autocomplete(inp, arr) {

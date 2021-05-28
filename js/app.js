@@ -271,10 +271,14 @@ function save(){
 function load(){    
    let checkedEmail = JSON.parse(localStorage.getItem('email'));
    let checkedProfile = JSON.parse(localStorage.getItem('profile'));
-   let checkedTimezone = JSON.parse(localStorage.getItem('timezone'));
+   let checkedTimezone = localStorage.getItem('timezone');
    document.getElementById("email").checked = checkedEmail;
    document.getElementById("profile").checked = checkedProfile;
-   document.getElementById("timezone").value = checkedTimezone;
+   
+
+   if (checkedTimezone != null) {
+      document.getElementById("timezone").value = checkedTimezone;
+   }
    
 }
 

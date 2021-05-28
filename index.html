@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/toggle-switch.css">
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -248,9 +249,37 @@
         <!--SETTINGS-->
         <div class="settings bottom-border">
             <h3>SETTINGS</h3>   
-            <!-- toggle switches-->
-            <div> send email toggle</div>
-            <div> set profile to public toggle</div>
+ 
+
+        <label class="switch-light switch-candy" onclick="">
+            <input type="checkbox" id="email">
+          
+            <strong>
+              Send Email Notifications
+            </strong>
+          
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+
+          <label class="switch-light switch-candy" onclick="">
+            <input type="checkbox" id="profile">
+          
+            <strong>
+              Set Profile To Public
+            </strong>
+          
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+            
+
             <!--Timezone drop down menu-->
             <select class="form-field" id="timezone">
                 <option disabled selected>Select Timezone</option>
@@ -261,8 +290,8 @@
                 <option value="eastern">Eastern Time</option>
             </select>
             <div>
-                <button class="save"> Save </button>
-                <button class="cancel"> Cancel </button>
+                <button class="save" onclick="save()"> Save </button>
+                <button class="cancel" onclick="del()"> Cancel </button>
             </div>
 
         </div>

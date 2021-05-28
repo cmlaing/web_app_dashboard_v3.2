@@ -251,6 +251,40 @@ const mobileOptions = {
    });
 
 
+/*=============================================
+Settings - Toggle Switch, Timezone, Save/Cancel
+=============================================*/
+
+let email = document.getElementById('email');
+let profile = document.getElementById('profile');
+let timezone = document.getElementById('timezone');
+
+// Grab each value and set it to local storage
+function save(){
+   localStorage.setItem('email', email.checked);
+   localStorage.setItem('profile', profile.checked);
+   localStorage.setItem('timezone', timezone.value);
+
+}
+
+// grab the values from local storage
+function load(){    
+   let checkedEmail = JSON.parse(localStorage.getItem('email'));
+   let checkedProfile = JSON.parse(localStorage.getItem('profile'));
+   let checkedTimezone = JSON.parse(localStorage.getItem('timezone'));
+   document.getElementById("email").checked = checkedEmail;
+   document.getElementById("profile").checked = checkedProfile;
+   document.getElementById("timezone").value = checkedTimezone;
+   
+}
+
+function del(){
+   location.reload();
+   localStorage.clear()
+
+}
+// make sure the loading function gets called
+load();
 
 
 

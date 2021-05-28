@@ -667,7 +667,7 @@ Media Queries for Tablet and Desktop views
 .settings {
     width: 50%;
     margin: 0;
-    border: solid 2px pink;
+    border: solid 2px #cccccc;
     
 
 }
@@ -748,7 +748,7 @@ Media Queries for Tablet and Desktop views
  {
     width: 50%;
     margin: 0;
-    border: solid 2px pink;
+    border: solid 2px #cccccc;
 
 }
 .new-members,
@@ -756,7 +756,7 @@ Media Queries for Tablet and Desktop views
 .message,
 .settings {
     margin: 0;
-    border: solid 2px pink;
+    border: solid 2px #cccccc;
 }
 
 #traffic-chart {

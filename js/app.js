@@ -36,8 +36,7 @@ const alertBanner = document.getElementById("alert");
 // HTML for the banner
 alertBanner.innerHTML = ` 
    <div class="alert">
-      <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks 
-      to complete </p>
+      <p><strong>Alert:</strong> You have <strong>2</strong> unread messages! </p>
       <p class="alert-banner-close">x</p>
    </div>
 `;
@@ -197,16 +196,17 @@ To create a chart, we first need to create an instance of the Chart().
        labels: days,
        datasets: [
        {
-           label: "Traffic",
+           
            data: dailyVolume,
            backgroundColor: '#7477BF',
-           borderColor: "rgba(255, 99, 132, 1)",
+           borderColor: "#FFFFFF",
            borderWidth: 1
        }
        ]
-    }
+    },
     
    });
+
 
 /*=======================================
 Mobile User chart
@@ -240,8 +240,8 @@ const mobileOptions = {
        {
            label: "Mobile Users",
            data: mobileVolume,
-           backgroundColor: ['#7477BF', '#FF66FF', '#FCB233'],
-           borderColor: "rgba(255, 99, 132, 1)",
+           backgroundColor: ['#7477BF', '#68CB88', '#00B8CB'],
+           borderColor: "#FFFFFF",
            borderWidth: 1
        }
        ]

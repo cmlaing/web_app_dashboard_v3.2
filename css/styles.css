@@ -164,6 +164,7 @@ nav svg{
     margin-left: 1.5rem;
 
 
+
 }
 
 /* 
@@ -210,7 +211,7 @@ Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
     border: 2px solid #7477BF;
     width: 100%;
     display: flex;
-    justify-content:space-between
+    justify-content:space-between;
 
 }
 
@@ -510,6 +511,11 @@ Media Queries for Tablet and Desktop views
         justify-content: flex-start;
     }
 
+    nav svg {
+        padding-top: 15px;
+
+    }
+
 .dashboard h2 {
     max-width: 200px;
     height: 60px;
@@ -570,7 +576,9 @@ Media Queries for Tablet and Desktop views
 
 /* --------------------------- 768px+ Wide Screens */
 @media screen and (min-width: 768px){
+ 
     .grid-container {
+        display: grid;
         grid-template-columns: 80px 1fr; /* nav is 80px, main is 1fr */
         grid-template-rows: 60px 1fr; /*header is 60px, rest is 1fr */
         grid-template-areas: "head head"
@@ -578,10 +586,72 @@ Media Queries for Tablet and Desktop views
 
     }
 
+
+
     nav {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: flex-start;
     }
+
+    nav svg {
+        padding-top: 15px;
+
+    }
+
+.dashboard h2 {
+    max-width: 200px;
+    height: 60px;
+}
+
+    .traffic-daily {
+        border-bottom: 2px solid #cccccc;
+        padding-bottom: 0.5rem;
+        
+    }
+    
+
+.traffic-daily,
+.mobile-users
+ {
+    width: 50%;
+    margin: 0;
+    border: solid 2px pink;
+
+}
+.new-members,
+.recent-activity,
+.message,
+.settings {
+    margin: 0;
+    border: solid 2px pink;
+}
+
+#traffic-chart {
+    max-height: 400px;
+    
+}
+
+#traffic-daily-chart,
+#mobile-user-chart{
+    max-height: 300px;
+    
+}
+
+.social-flex {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.socialCard {
+    width: 40%;
+    margin: 10px;
+}
+
+
 }

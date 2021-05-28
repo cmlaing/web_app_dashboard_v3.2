@@ -239,8 +239,9 @@
             
             <form>
                 <input type="text" id="search-user" placeholder="Search for User"> <br>
-                <textarea id="message-user" placeholder="Message for User"> </textarea> <br>
-                <button id="send-message"> Send </button>
+                <textarea placeholder="Write Message"  id="message-user"></textarea>
+                 <br>
+                <button id="send-message" onclick="send()"> Send </button>
             </form>
 
             
@@ -250,34 +251,35 @@
         <div class="settings bottom-border">
             <h3>SETTINGS</h3>   
  
+        <div class="flex-toggle">
+            <label class="switch-light switch-candy toggle-item" onclick="">
+                <input type="checkbox" id="email">
+            
+                <strong>
+                Send Email Notifications
+                </strong>
+            
+                <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+                </span>
+            </label>
 
-        <label class="switch-light switch-candy" onclick="">
-            <input type="checkbox" id="email">
-          
-            <strong>
-              Send Email Notifications
-            </strong>
-          
-            <span>
-              <span>Off</span>
-              <span>On</span>
-              <a></a>
-            </span>
-          </label>
-
-          <label class="switch-light switch-candy" onclick="">
-            <input type="checkbox" id="profile">
-          
-            <strong>
-              Set Profile To Public
-            </strong>
-          
-            <span>
-              <span>Off</span>
-              <span>On</span>
-              <a></a>
-            </span>
-          </label>
+            <label class="switch-light switch-candy toggle-item" onclick="">
+                <input type="checkbox" id="profile">
+            
+                <strong>
+                Set Profile To Public
+                </strong>
+            
+                <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+                </span>
+            </label>
+        </div>
             
 
             <!--Timezone drop down menu-->

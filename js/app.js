@@ -250,6 +250,30 @@ const mobileOptions = {
     
    });
 
+/*=============================================
+Message User
+=============================================*/
+
+// make the send button create a popup or error message
+
+function send() {
+
+   let user = document.getElementById('search-user');
+   let message = document.getElementById('message-user');
+
+   // if message, create popup
+
+   if (user.value === "" && message.value === "") {
+         window.alert("Message not sent - Need to Select User and write a message");
+      } else if (user.value === ""){
+         window.alert("Message not sent - Need to Select User");
+      } else if (message.value === "") {
+         window.alert("Message not sent - Need to write a message");
+      } else {
+         window.alert("Message sent successfully!");
+      }
+}
+
 
 /*=============================================
 Settings - Toggle Switch, Timezone, Save/Cancel

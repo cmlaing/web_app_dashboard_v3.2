@@ -342,12 +342,22 @@ Social -> socialCard (svg and stats)
     align-items: center;
 }
 
+.stats h2 {
+    color: #7477BF;
+}
+
+.stats p {
+    font-size: 2rem;
+    color: #656565;
+}
+
 .stats {
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding-left: 1rem;
 }
 
 

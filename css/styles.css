@@ -668,7 +668,6 @@ Media Queries for Tablet and Desktop views
     width: 50%;
     margin: 0;
     border: solid 2px #cccccc;
-    
 
 }
 
@@ -697,7 +696,9 @@ Media Queries for Tablet and Desktop views
     margin: 10px;
 }
 
-
+.activityCard {
+    padding-bottom: 26px;
+}
 
 
 

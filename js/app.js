@@ -72,12 +72,10 @@ var labels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10'
             beginAtZero: true
          }
       },
-      plugins: {
-         legend: {
-            display: false
-         }
-      } 
-   };
+      legend: {
+         display: false
+       }
+     };
 
 /*
 To create a chart, we first need to create an instance of the Chart().
@@ -91,7 +89,7 @@ To create a chart, we first need to create an instance of the Chart().
        labels: labels,
        datasets: [
        {
-           label: "Traffic",
+           
            data: volume,
            lineTension: 0.3,
            fill: {

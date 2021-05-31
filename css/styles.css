@@ -62,6 +62,7 @@ header {
     display: flex;
     align-items: center;
     padding: 0;
+    margin: auto;
     justify-content: center;
     height: 80px;
     flex-grow: 1;
@@ -161,14 +162,16 @@ header {
     border: solid 1px cornsilk;
     
     
+    
 
 }
 
 
 .header-container h3 { /* Student Name */
     color: white;
-    padding: 0.2rem;
+    padding: 0.1rem;
     font-weight: lighter;
+    font-size: 1rem;
 
 }
 
@@ -176,29 +179,24 @@ header {
 
 nav {
     background-color: #4D4C72;
-    justify-content: center;
     grid-area: nav;
     display: flex;
-    
-
+    justify-content:space-between;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    padding-right: 1.5em;
-
 }
 
 nav svg{
     display: flex;
     flex-direction: row;
-    align-content: space-between;
-    align-self: center;
-   
+    align-content:space-between;
 
     height: auto;
     width: 2.5rem;
     fill: white;
 
     margin-left: 1.5rem;
+    margin-top: 0.75rem;
 
 
 
@@ -225,6 +223,19 @@ main {
 
 }
 
+/* h3 headers for each section */
+
+.traffic-chart h3,
+.traffic-daily h3,
+.mobile-users h3,
+.social h3,
+.new-members h3,
+.recent-activity h3,
+.message h3,
+.settings h3 { 
+    margin-top: 0.5rem;
+}
+
 /* divs within main */
 
 /*
@@ -240,34 +251,50 @@ Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
 .dashboard h2{
     background-color: white;
     width: 40%;
+    height: 50px;
+    border-right: 2px solid lightgrey;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    
 }
 .alert{
     color: white;
     background-color: #7477BF;
     border-radius: 10px;
     border: 2px solid #7477BF;
-    width: 100%;
+    width: 95%;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    padding: 0.2rem;
+    margin-left: 15px;
+    margin-right: 0;
+    
 
 }
+
+
 
 /* first traffic chart */
 .nav-traffic {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-around;
+    
 }
 
 .nav-traffic li {
-    display: block;
+    display: inline-block;
     color: black;
     background-color: white;
-    text-align: right;
-    float: right;
+    text-align: center;
     padding: 8px;
+    font-size: 1.25rem;
 
 }
+
+
 .nav-traffic li:hover {
     color: white;
     background-color: lightgreen;
@@ -281,6 +308,8 @@ Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
 
 canvas { /* may help keep traffic charts confined */
     max-width: 100%;
+    max-height: 300px;
+    margin-left: 1rem;
   }
 
   /* the specific charts within the divs with same name*/
@@ -327,20 +356,30 @@ Social -> socialCard (svg and stats)
     border-radius: 5px;
     margin: 1rem auto;
     padding: 0.5rem;
-    width: 60%;
+    width: 95%;
     background-color: #fafafa;
 
 
 }
 
 .social svg {
-    height: auto;
-    width: 2.5rem;
-    fill: #7477BF;
-    margin-left: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    fill: white;
+    padding: 7px;
     justify-content: center;
     align-items: center;
 }
+
+.social-img {
+    background-color: #7477BF;
+    border-radius: 100%;
+    padding: 5px;
+    
+
+}
+
+
 
 .stats h2 {
     color: #7477BF;
@@ -662,6 +701,12 @@ Media Queries for Tablet and Desktop views
     height: 60px;
 }
 
+.nav-traffic {
+    display: block;
+    float: right;
+    
+}
+
     .traffic-daily {
         border-bottom: 2px solid #cccccc;
         padding-bottom: 0.5rem;
@@ -745,6 +790,12 @@ Media Queries for Tablet and Desktop views
 .dashboard h2 {
     max-width: 200px;
     height: 60px;
+}
+
+.nav-traffic {
+    display: block;
+    float: right;
+    
 }
 
     .traffic-daily {

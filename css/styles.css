@@ -24,9 +24,6 @@ body {
     padding-bottom: 0.5rem;
 }
 
-/* centering */
-
-
 
 /* Grid Stuff */
 
@@ -383,6 +380,7 @@ Social -> socialCard (svg and stats)
 
 .stats h2 {
     color: #7477BF;
+    font-weight: lighter;
 }
 
 .stats p {
@@ -503,6 +501,10 @@ Recent Activity
 
 .activityCard p:nth-child(2) { /* Time Stamp */
     padding-bottom: 0.5rem;
+}
+
+.arrow {
+    display: none;
 }
 
 /* =============================================
@@ -767,11 +769,11 @@ Media Queries for Tablet and Desktop views
     
 }
 
-    .traffic-daily {
+.traffic-daily {
         border-bottom: 2px solid #cccccc;
         padding-bottom: 0.5rem;
         
-    }
+}
     
 
 .traffic-daily,
@@ -793,7 +795,7 @@ Media Queries for Tablet and Desktop views
 
 #traffic-daily-chart,
 #mobile-user-chart{
-    max-height: 300px;
+    max-height: 800px;
     
 }
 
@@ -811,11 +813,64 @@ Media Queries for Tablet and Desktop views
     margin: 10px;
 }
 
+
+
+.member,
 .activityCard {
-    padding-bottom: 26px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    
+}
+
+.member img,
+.activityCard img {
+    order: 1;
+    
+
+}
+
+.pair { /* Names and email addresses */
+    order: 2;
+    flex-grow: 2;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    text-align: left;
+    
+    
+}
+
+.date { /* date joined */
+    order: 3;
+    flex-grow: 4;
+    text-align: right;
+}
+.arrow { /* little > arrow on right side of activity card */
+    order: 4;
+    flex-grow: 4;
+    text-align: right;
+    display:flex;
+    font-size: 1.5rem;
+    color: #cccccc;
 }
 
 
+
+.send-message,
+.save,
+.cancel {
+    margin-top: auto;
+
+}
+
+#send-message {
+    padding-bottom: none;
+    margin-top: auto;
+    
+}   
 
 
 }
@@ -831,6 +886,12 @@ Media Queries for Tablet and Desktop views
         grid-template-areas: "head head"
                              "nav main";
 
+    }
+
+    .header-container {
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+    
     }
 
 
@@ -852,18 +913,33 @@ Media Queries for Tablet and Desktop views
     height: 60px;
 }
 
+.traffic-chart h3,
+.traffic-daily h3,
+.mobile-users h3,
+.social h3,
+.new-members h3,
+.recent-activity h3,
+.message h3,
+.settings h3 { 
+    margin-left: 1rem;
+    font-weight: lighter;
+}
+
+
 .nav-traffic {
     display: block;
     float: right;
     
 }
 
-    .traffic-daily {
+
+
+
+.traffic-daily {
         border-bottom: 2px solid #cccccc;
         padding-bottom: 0.5rem;
         
-    }
-    
+}
 
 .traffic-daily,
 .mobile-users
@@ -888,7 +964,7 @@ Media Queries for Tablet and Desktop views
 
 #traffic-daily-chart,
 #mobile-user-chart{
-    max-height: 300px;
+    max-height: 800px;
     
 }
 
@@ -902,9 +978,56 @@ Media Queries for Tablet and Desktop views
 }
 
 .socialCard {
-    width: 40%;
+    width: 35%;
+    height: 100px;
     margin: 10px;
 }
+
+
+
+.member,
+.activityCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    
+}
+
+.member img,
+.activityCard img {
+    order: 1;
+
+}
+
+.pair { /* Names and email addresses */
+    order: 2;
+    flex-grow: 2;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    text-align: left;
+    
+    
+}
+
+.date { /* date joined */
+    order: 3;
+    flex-grow: 4;
+    text-align: right;
+}
+.arrow { /* little > arrow on right side of activity card */
+    order: 3;
+    flex-grow: 4;
+    text-align: right;
+    display:inline-block;
+    font-size: 1.5rem;
+    color: #cccccc;
+}
+
+
+
 
 
 }

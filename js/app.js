@@ -60,7 +60,7 @@ var labels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10'
                  '11-17','18-24', '25-31'];
 
 
-   /* Traffic object literal to hold values for the hourly/daily/weekly/monthly values */
+   /* Traffic options for scale starting at 0, hiding the legend */
 
    let trafficOptions = {
       aspectRatio: 2.5,
@@ -72,10 +72,12 @@ var labels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10'
             beginAtZero: true
          }
       },
-      legend: {
-         display: false
-       }
-     };
+      plugins: {
+         legend: {
+            display: false,
+          }
+      }
+   };
 
 /*
 To create a chart, we first need to create an instance of the Chart().
@@ -184,6 +186,24 @@ var trafficDaily = document.getElementById('traffic-daily-chart');
 var dailyVolume = [75, 115, 175, 125, 225, 200, 100];
 var days = ['Sun', 'M', 'T', 'W','Th','F','Sat'];
 
+let dailyOptions = {
+   aspectRatio: 2.5,
+   animation: {
+      duration: 0
+   },
+   scales: {
+      y: {
+         beginAtZero: true
+      }
+   },
+   plugins: {
+      legend: {
+         display: false,
+       }
+   }
+};
+
+
 /*
 To create a chart, we first need to create an instance of the Chart().
 
@@ -204,8 +224,10 @@ To create a chart, we first need to create an instance of the Chart().
        }
        ]
     },
-    
-   });
+
+   options: dailyOptions
+
+  });
 
 
 /*=======================================
@@ -218,7 +240,12 @@ var mobileLabels = ['Desktop', 'Tablet', 'Phones'];
 
 
 
+
 const mobileOptions = {
+   aspectRatio: 2.5,
+   animation: {
+      duration: 0
+   },
     plugins: {
         legend: {
             position: 'right',
@@ -235,7 +262,6 @@ const mobileOptions = {
     type: "doughnut",
     data: {
        labels: mobileLabels,
-       options: mobileOptions,
        datasets: [
        {
            label: "Mobile Users",
@@ -245,10 +271,11 @@ const mobileOptions = {
            borderWidth: 1
        }
        ]
-    }
-    
-    
-   });
+      },
+
+      options: mobileOptions
+   
+     });
 
 /*=============================================
 Message User

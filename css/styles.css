@@ -100,19 +100,19 @@ header {
 
 @keyframes motionBell {
     30% {
-        fill: pink;
+        fill: rgb(235, 164, 238);
         transform: scale(1.4);
     }
     50% {
-        fill: pink;
+        fill: rgb(235, 164, 238);
         transform: rotate(30deg);
     }
     60% {
-        fill: pink;
+        fill: rgb(235, 164, 238);
         transform: rotate(-30deg);
     }
     100% {
-        fill: pink;
+        fill: rgb(235, 164, 238);
         transform: scale(1);
     }
 }
@@ -728,7 +728,13 @@ Main Content - Settings
 
 .save-cancel {
     margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    
+    
 }
+
 
 
 #timezone {
@@ -745,23 +751,25 @@ Main Content - Settings
 .save {
     background-color: #7477BF;
     cursor: pointer;
-    width: 10rem;
+    width: 9rem;
     height: 3rem;
     border-radius: 5px;
     border: solid 1px #cccccc;
     color: white;
-    margin-bottom: 0.5rem;
+    margin-right: 10px;
+    align-self: flex-start;
 
 }
 
 .cancel {
     background-color: #999999;
     cursor: pointer;
-    width: 10rem;
+    width: 9rem;
     height: 3rem;
     border-radius: 5px;
     border: solid 1px #cccccc;
     color: white;
+    align-self: flex-end;
 
 }
 
@@ -793,6 +801,13 @@ Media Queries for Tablet and Desktop views
         grid-template-areas: "head head"
                              "nav main";
 
+    }
+
+    .header-container {
+        width: 99%;
+    }
+    main {
+        width: 99%;
     }
 
 
@@ -873,7 +888,7 @@ Media Queries for Tablet and Desktop views
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    height: 150px;
+    height: 130px;
     
     
     
@@ -925,7 +940,15 @@ Media Queries for Tablet and Desktop views
     padding-bottom: 0;
     margin-top: auto;
     
-}   
+}  
+
+.save-cancel {
+    max-width: 90%;
+}
+.save,
+.cancel {
+    width: 30vw;
+}
 
 
 }
@@ -1083,6 +1106,11 @@ Media Queries for Tablet and Desktop views
     display: inline-block;
     align-self: flex-end;
 
+}
+
+.save,
+.cancel {
+    width: 40vw;
 }
 
 

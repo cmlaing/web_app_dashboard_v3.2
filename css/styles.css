@@ -141,13 +141,18 @@ header {
     background-color: #7477BF;
     color: white;
     border: 2px solid white;
-    position: absolute;
+    padding: 1rem;
     min-width: 5rem;
+    position: absolute;
+    cursor: grab;
     z-index: 1;
 
 }
 .dropdown-menu p{
     border-bottom: 1px solid lightgreen;
+    padding-bottom: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 
@@ -247,7 +252,7 @@ Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
 
 .dashboard h2{
     background-color: white;
-    width: 40%;
+    width: 200px;
     height: 50px;
     border-right: 2px solid lightgrey;
     padding-top: 1rem;
@@ -381,6 +386,7 @@ Social -> socialCard (svg and stats)
 .stats h2 {
     color: #7477BF;
     font-weight: lighter;
+    font-size: 1.3rem;
 }
 
 .stats p {
@@ -536,6 +542,12 @@ Messages
     width: 90%;
     border-radius: 10px;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.message button {
+    align-self: flex-end;
 }
 
 #search-user{
@@ -671,17 +683,29 @@ Settings
 .toggle-item {
     width: 90%;
     margin: 1rem auto;
-    
+    display: flex;
 
 }
 
+.toggle-item strong {
+    align-self: flex-start;
+    margin-right: 25px;
+}
 
+.toggle-item span {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-grow: 1;
+    padding-right: 15px;
+    max-width: 200px;
+    margin-left: auto;
+    
+}
 
-
-
-
-
-
+.save-cancel {
+    margin-top: auto;
+}
 
 
 #timezone {

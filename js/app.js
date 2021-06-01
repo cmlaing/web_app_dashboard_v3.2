@@ -250,7 +250,7 @@ const mobileOptions = {
         legend: {
             position: 'right',
             labels: {
-                boxWidth: 20,
+                boxWidth: 25,
                 fontStyle: 'bold'
                     }
                  }

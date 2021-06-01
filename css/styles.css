@@ -873,6 +873,7 @@ Media Queries for Tablet and Desktop views
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    height: 150px;
     
     
     

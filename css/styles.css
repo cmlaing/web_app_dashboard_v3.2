@@ -824,21 +824,23 @@ Media Queries for Tablet and Desktop views
     justify-content: space-between;
     
     
+    
 }
 
 .member img,
 .activityCard img {
     order: 1;
+    float: left;
+    align-self: flex-start;
     
 
 }
 
-.pair { /* Names and email addresses */
-    order: 2;
-    flex-grow: 2;
-    padding-left: 1rem;
-    margin-left: 1rem;
+.pair { /* Names and email addresses as a column flex container*/
+    display: flex;
+    flex-direction: column;
     text-align: left;
+    width: 60%;
     
     
 }
@@ -855,6 +857,8 @@ Media Queries for Tablet and Desktop views
     display:flex;
     font-size: 1.5rem;
     color: #cccccc;
+    display: inline-block;
+    align-self: flex-end;
 }
 
 
@@ -994,6 +998,7 @@ Media Queries for Tablet and Desktop views
     justify-content: space-between;
     
     
+    
 }
 
 .member img,
@@ -1004,7 +1009,7 @@ Media Queries for Tablet and Desktop views
 
 .pair { /* Names and email addresses */
     order: 2;
-    flex-grow: 2;
+    flex-grow: 1;
     padding-left: 1rem;
     margin-left: 1rem;
     text-align: left;
@@ -1024,6 +1029,9 @@ Media Queries for Tablet and Desktop views
     display:inline-block;
     font-size: 1.5rem;
     color: #cccccc;
+    display: inline-block;
+    align-self: flex-end;
+
 }
 
 

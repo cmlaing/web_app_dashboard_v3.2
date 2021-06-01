@@ -72,15 +72,12 @@ header {
     font-size: 1.5rem;
     padding-left: 0.5rem;
     margin: 0;
-
     flex-grow: 1;
     
 
 }
 
 /* bell icon in header */
-
-
 
 .header-container svg { 
     height: 30px;
@@ -119,7 +116,6 @@ header {
         transform: scale(1);
     }
 }
-
 
 
 .bell svg:hover {
@@ -161,10 +157,7 @@ header {
     height: 2rem;
     width: 2rem;
     border-radius: 100%;
-    border: solid 1px cornsilk;
-    
-    
-    
+    border: solid 1px cornsilk;  
 
 }
 
@@ -177,7 +170,12 @@ header {
 
 }
 
-/* Navigation Bar */
+/* 
+================================================
+Grid area: nav
+Includes SVG icons as links to parts of the page
+================================================
+*/
 
 nav {
     background-color: #4D4C72;
@@ -208,11 +206,13 @@ nav svg{
 ================================================
 Grid area: main
 Includes: 
-Dashboard and Traffic Line Graph
- all charts,
+Dashboard 
+3 Traffic Charts - line, bar, donut
 Social Stats Cards: Facebook, Instagram, Twitter
-messages
-settings
+New Members
+Recent Activity
+Messages
+Settings
 ================================================
 */
 
@@ -238,20 +238,49 @@ main {
     margin-top: 0.5rem;
 }
 
-/* divs within main */
 
 /*
-======================================================
+==================================================================
 Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
-======================================================
+==================================================================
 */
+
+
+/* DRY */
+
+.dashboard h2,
+.nav-traffic li {
+    background-color: white;
+}
+
+.nav-traffic,
+.alert,
+.socialCard,
+.stats,
+.new-members,
+.recent-activity,
+.message,
+.message form,
+.settings,
+.flex-toggle,
+.toggle-item {
+    display: flex;
+    
+}
+
+/*
+==================================================================
+Main Content - Dashboard
+Contains h2 "Dashboard" and alert bar
+==================================================================
+*/
+
 .dashboard {
     width: 100%;
     background-color:#F7F7F7;
 }
 
 .dashboard h2{
-    background-color: white;
     width: 200px;
     height: 50px;
     border-right: 2px solid lightgrey;
@@ -265,7 +294,6 @@ Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
     border-radius: 10px;
     border: 2px solid #7477BF;
     width: 95%;
-    display: flex;
     justify-content: space-between;
     padding: 0.2rem;
     margin-left: 15px;
@@ -274,14 +302,17 @@ Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
 
 }
 
+/*
+==================================================================
+Main Content - Charts
+==================================================================
+*/
 
-
-/* first traffic chart */
+/* first traffic chart navigation */
 .nav-traffic {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: space-around;
     
 }
@@ -289,13 +320,11 @@ Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
 .nav-traffic li {
     display: inline-block;
     color: black;
-    background-color: white;
     text-align: center;
     padding: 8px;
     font-size: 1.25rem;
 
 }
-
 
 .nav-traffic li:hover {
     color: white;
@@ -303,8 +332,6 @@ Main Content - Dashboard, Alert Banner, and Traffic Charts/Graphs
     border-radius: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
-
-
 }
 
 
@@ -324,22 +351,17 @@ canvas { /* may help keep traffic charts confined */
 
 }
 
-/* first traffic chart div, the line graph */
-.traffic-chart {
-    width: 100%;
-}
-/* second traffic chart div, the bar graph */
-.traffic-daily {
-    width: 100%;
-}
-
-/* third chart div, doughnut style for mobile users */
+/* All 3 graphs */
+.traffic-chart,
+.traffic-daily,
 .mobile-users {
     width: 100%;
 }
 
+
 /* =============================================
-Social Stats Cards: Facebook, Instagram, Twitter
+Main Content - Social Stats Cards: 
+Facebook, Instagram, Twitter
 
 Social -> socialCard (svg and stats)
 ==============================================*/
@@ -351,7 +373,7 @@ Social -> socialCard (svg and stats)
 }
 
 .socialCard {
-    display:flex;
+    
     justify-content: flex-start;
     align-items: center;
     border: 2px solid rgb(190, 188, 188);
@@ -382,7 +404,6 @@ Social -> socialCard (svg and stats)
 }
 
 
-
 .stats h2 {
     color: #7477BF;
     font-weight: lighter;
@@ -396,7 +417,6 @@ Social -> socialCard (svg and stats)
 
 .stats {
 
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -407,12 +427,13 @@ Social -> socialCard (svg and stats)
 
 
 /* =============================================
-New Members
+Main Content - New Members
+Member -> img, pair (name/email), date
 ==============================================*/
 
 
 .new-members {
-    display:flex;
+    
     justify-content: flex-start;
     align-content: center; 
     align-items: center;
@@ -463,12 +484,13 @@ New Members
     margin-bottom: 0.2rem;
 }
 
-/* =============================================
-Recent Activity
-==============================================*/
+/* ===================================================
+Main Content - Recent Activity
+activityCard -> img, pair (activity/time), right arrow
+====================================================*/
 
 .recent-activity {
-    display:flex;
+    
     justify-content: flex-start;
     align-content: center; 
     align-items: center;
@@ -514,11 +536,12 @@ Recent Activity
 }
 
 /* =============================================
-Messages
+Main Content - Messages
+h3, form (input, textarea, send() )
 ==============================================*/
 
 .message {
-    display:flex;
+    
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
@@ -542,7 +565,6 @@ Messages
     width: 90%;
     border-radius: 10px;
     margin-top: 1rem;
-    display: flex;
     flex-direction: column;
 }
 
@@ -645,11 +667,12 @@ Messages
 }
 
 /* =============================================
-Settings
+Main Content - Settings
+2 toggle switches, timezone menu, save/cancel
 ==============================================*/
 
 .settings {
-    display:flex;
+
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
@@ -672,7 +695,7 @@ Settings
 /* Switches */
 
 .flex-toggle {
-    display: flex;
+    
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
@@ -683,7 +706,7 @@ Settings
 .toggle-item {
     width: 90%;
     margin: 1rem auto;
-    display: flex;
+    
 
 }
 
@@ -746,7 +769,11 @@ Settings
 
 
 
-
+/*
+==================================================================
+*********END OF MAIN CONTENT AND MOBILE VIEW*********
+==================================================================
+*/
 
 
 /* 
@@ -881,7 +908,6 @@ Media Queries for Tablet and Desktop views
     display:flex;
     font-size: 1.5rem;
     color: #cccccc;
-    display: inline-block;
     align-self: flex-end;
 }
 
@@ -895,7 +921,7 @@ Media Queries for Tablet and Desktop views
 }
 
 #send-message {
-    padding-bottom: none;
+    padding-bottom: 0;
     margin-top: auto;
     
 }   

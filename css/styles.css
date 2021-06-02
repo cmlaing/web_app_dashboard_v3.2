@@ -11,6 +11,7 @@ Mobile-first Design Layout for Project 7 Treehouse "WebApp"
     margin: 0;
     padding: 0;  
     font-family: Georgia, 'Times New Roman', Times, serif;
+    
 
 }
 
@@ -698,31 +699,40 @@ Main Content - Settings
     
     flex-direction: row;
     justify-content:space-between;
-    align-items: center;
+    align-items: left;
+    text-align: left;
     flex-wrap: wrap;
     padding-top: 2rem;
+    width: 100%;
+    
 
 }
 .toggle-item {
     width: 90%;
     margin: 1rem auto;
+    align-items: left;
     
 
 }
 
+
 .toggle-item strong {
     align-self: flex-start;
-    margin-right: 25px;
+    margin-right: 20px;
+    width: 100%;
+    white-space: nowrap;
+    
 }
 
 .toggle-item span {
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    justify-content: space-between;
+    align-items: left;
+    align-content: left;
     flex-grow: 1;
     padding-right: 15px;
     max-width: 200px;
     margin-left: auto;
+    
     
 }
 

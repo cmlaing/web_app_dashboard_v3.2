@@ -452,6 +452,7 @@ function load(){
 }
 
 function del(){
+   timezone.selectedIndex = 0;
    location.reload();
    localStorage.clear()
 
